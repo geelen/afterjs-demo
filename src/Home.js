@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 class Home extends Component {
   static async getInitialProps({ req, res, match, history, location, ...ctx }) {
-    return { whatever: 'stuff' };
+    return {ctx}
   }
 
   render() {
