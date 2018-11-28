@@ -8,7 +8,7 @@
     "test": "razzle test --env=jsdom",
     "start:prod": "NODE_ENV=production node build/server.js",
     "prebuild:fab": "fab-afterjs setup",
-    "build:fab": "PUBLIC_PATH='/_assets/' npm run build && fab-afterjs build",
+    "build:fab": "PUBLIC_PATH='/_assets/' npm run build && fab-afterjs build -o fab-dist",
     "postbuild:fab": "fab-afterjs teardown",
     "fab:e2e": "rm -rf .fab && npm run build:fab && fab-serve .fab/fab.zip"
   },
