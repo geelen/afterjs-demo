@@ -4,11 +4,13 @@
   "license": "MIT",
   "scripts": {
     "start": "razzle start",
-    "build": "PUBLIC_PATH='/_assets/' razzle build",
+    "build": "razzle build",
     "test": "razzle test --env=jsdom",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "build:fab": "fab-afterjs",
-    "fab:e2e": "rm -rf fab && npm run build && mkdir -p fab && cp -R build/public fab/_assets && npm run build:fab && fab-serve fab/fab.zip"
+    "prebuild:fab": "fab-afterjs setup",
+    "build:fab": "PUBLIC_PATH='/_assets/' npm run build && cp -R build/public fab/_assets && fab-afterjs build",
+    "postbuild:fab": "fab-afterjs teardown",
+    "fab:e2e": "rm -rf fab && npm run build:fab && fab-serve fab/fab.zip"
   },
   "dependencies": {
     "@jaredpalmer/after": "latest",

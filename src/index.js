@@ -1,16 +1,27 @@
-import { render } from '@jaredpalmer/after'
-import routes from './routes'
+import express from 'express';
 
-const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
+let app = require('./server').default;
 
-export default async (req, res, settings) =>
-  await render({
-    req,
-    res,
-    routes,
-    assets,
-    // Anything else you add here will be made available
-    // within getInitialProps(ctx)
-    // e.g a redux store...
-    ...settings
-  })
+if (module.hot) {
+  module.hot.accept('./server', function() {
+    console.log('🔁  HMR Reloading `./server`...');
+    try {
+      app = require('./server').default;
+    } catch (error) {
+      console.error(error);
+    }
+  });
+  console.info('✅  Server-side HMR Enabled!');
+}
+
+const port = process.env.PORT || 3000;
+
+export default express()
+  .use((req, res) => app.handle(req, res))
+  .listen(port, function(err) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(`> Started on port ${port}`);
+  });
