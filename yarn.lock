@@ -92,9 +92,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@fab/afterjs@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.0.2.tgz#29b243d902dfcde0883ae5104b2022c4ef41f7e0"
+"@fab/afterjs@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.0.3.tgz#b574b1b149f78e7089ee7003f65a11baec794825"
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"
