@@ -29,6 +29,7 @@ export default class Document extends React.Component {
           {helmet.meta.toComponent()}
           {helmet.link.toComponent()}
           {/** here is where we put our Styled Components styleTags... */}
+          <link rel="stylesheet" href={assets.client.css}/>
           {styleTags}
         </head>
         <body {...bodyAttrs}>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import './client.css';
 
 const Outer = styled.div`
   height: 100vh;

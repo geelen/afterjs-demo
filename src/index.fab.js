@@ -13,7 +13,6 @@ export default async (req, res, settings) => {
   const production_settings = {
     world_name: 'WORLD'
   }
-  console.log(req)
 
   return await render({
     req,
@@ -29,10 +28,3 @@ export default async (req, res, settings) => {
     ...settings
   })
 }
-
-/*
-*
-* If you can make the `after.js` thing into a Hello World type page with of that info on it (edited)
-ip address maybe, environment, some HTTP headers?
-
-*/

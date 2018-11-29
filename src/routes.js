@@ -2,13 +2,15 @@ import React from 'react'
 
 import { asyncComponent } from '@jaredpalmer/after'
 import NotFound from './NotFound'
-import Home from './components/Home'
 
 export default [
   {
     path: '/',
     exact: true,
-    component: Home, // required
+    component: asyncComponent({
+      loader: () => import('./components/Home'), // required
+      Placeholder: () => <div>...LOADING...</div> // this is optional, just returns null by default
+    })
   },
   {
     path: '/about',

@@ -120,9 +120,9 @@
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
 
-"@fab/afterjs@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.0.4.tgz#340372a28960f3cdb1a8fb8b468d207d65e126d1"
+"@fab/afterjs@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.0.5.tgz#c515e7bf52d7d09570ab6cd96bd8e57fa7855622"
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"
