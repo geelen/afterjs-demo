@@ -10,17 +10,25 @@ const Outer = styled.div`
   align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: white;
+    
+  > h1 {
+    font-size: 3rem;
+  }
 `
 
 const Logo = styled.img`
   width: 8rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  z-index: 0;
 `
 
 const Info = styled.div`
+  color: black;
   max-width: calc(100vw - 2rem);
-  min-height: 30rem;
-  width: 40rem;
-  margin: 1rem;
+  width: 50rem;
   padding: 1rem 2rem;
   background: white;
   border-radius: 0.5rem;
@@ -28,9 +36,12 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
   
   > pre {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     align-self: stretch;
     overflow-x: auto;
   }
@@ -45,8 +56,8 @@ class Home extends Component {
     return (
       <Outer>
         <Logo src={require('./logo.svg')} alt="Linc Logo" />
+        <h1>Hello {this.props.ctx.world_name}</h1>
         <Info>
-          <h2>Hello {this.props.ctx.world_name}</h2>
           <pre>
             { JSON.stringify(this.props.ctx, null, 2) }
           </pre>

@@ -11,7 +11,7 @@ export default async (req, res, settings) => {
 
   // Default settings, overridden by settings above.
   const production_settings = {
-    world_name: 'WORLD'
+    world_name: 'World!'
   }
 
   return await render({
