@@ -9,6 +9,12 @@ export default async (req, res, settings) => {
   res.setHeader('Content-Type', 'text/html')
   res.setHeader('Cache-Control', 's-maxage=300, public, max-age=0')
 
+  // Default settings, overridden by settings above.
+  const production_settings = {
+    world_name: 'WORLD'
+  }
+  console.log(req)
+
   return await render({
     req,
     res,
@@ -18,7 +24,8 @@ export default async (req, res, settings) => {
     // Anything else you add here will be made available
     // within getInitialProps(ctx)
     // e.g a redux store...
-    serverTime: new Date().toString(),
+    server_time: new Date().toString(),
+    ...production_settings,
     ...settings
   })
 }

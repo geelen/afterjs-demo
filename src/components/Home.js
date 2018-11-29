@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import './client.css';
 
 const Outer = styled.div`
   height: 100vh;
@@ -46,7 +47,7 @@ class Home extends Component {
       <Outer>
         <Logo src={require('./logo.svg')} alt="Linc Logo" />
         <Info>
-          <h2>Server information</h2>
+          <h2>Hello {this.props.ctx.world_name}</h2>
           <pre>
             { JSON.stringify(this.props.ctx, null, 2) }
           </pre>
