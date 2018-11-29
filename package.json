@@ -10,13 +10,15 @@
     "prebuild:fab": "fab-afterjs setup",
     "build:fab": "PUBLIC_PATH='/_assets/' npm run build && fab-afterjs build -o fab",
     "postbuild:fab": "fab-afterjs teardown",
-    "fab:e2e": "rm -rf .fab && npm run build:fab && fab-serve .fab/fab.zip"
+    "fab:e2e": "rm -rf fab && npm run build:fab && fab-serve fab/fab.zip"
   },
   "dependencies": {
     "@fab/afterjs": "^0.0.3",
     "@jaredpalmer/after": "latest",
     "express": "^4.16.2",
-    "memfs": "^2.14.0",
+    "memfs": "2.12.1",
+    "mock-express-response": "^0.2.2",
+    "mock-res": "^0.5.0",
     "razzle": "^2.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
