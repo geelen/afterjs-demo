@@ -1,5 +1,6 @@
 import { render } from '@jaredpalmer/after'
 import routes from './routes'
+import Document from './Document'
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
 
@@ -13,9 +14,11 @@ export default async (req, res, settings) => {
     res,
     routes,
     assets,
+    document: Document,
     // Anything else you add here will be made available
     // within getInitialProps(ctx)
     // e.g a redux store...
+    serverTime: new Date().toString(),
     ...settings
   })
 }
