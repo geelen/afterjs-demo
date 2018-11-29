@@ -92,9 +92,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@fab/afterjs@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.0.3.tgz#b574b1b149f78e7089ee7003f65a11baec794825"
+"@fab/afterjs@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.0.4.tgz#340372a28960f3cdb1a8fb8b468d207d65e126d1"
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"
@@ -105,9 +105,23 @@
     chalk "^2.4.1"
     deterministic-zip "^1.0.5"
     fs-extra "^7.0.1"
-    memfs "^2.14.0"
+    memfs "2.12.1"
+    mock-express-response "^0.2.2"
     tslib "^1"
     webpack "^4.26.1"
+
+"@fab/serve@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@fab/serve/-/serve-0.0.2.tgz#f41481adccb93f3bc0b1dfcefcc346228693924e"
+  dependencies:
+    "@oclif/command" "^1"
+    "@oclif/config" "^1"
+    "@oclif/plugin-help" "^2"
+    "@types/mime-types" "^2.1.0"
+    "@types/node-fetch" "^2.1.4"
+    async-file "^2.0.2"
+    node-fetch "^2.3.0"
+    tslib "^1"
 
 "@jaredpalmer/after@latest":
   version "1.3.1"
@@ -175,6 +189,16 @@
 "@types/fs-extra@^5.0.4":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.4.tgz#b971134d162cc0497d221adde3dbb67502225599"
+  dependencies:
+    "@types/node" "*"
+
+"@types/mime-types@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@types/mime-types/-/mime-types-2.1.0.tgz#9ca52cda363f699c69466c2a6ccdaad913ea7a73"
+
+"@types/node-fetch@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.1.4.tgz#093d1beae11541aef25999d70aa09286fd025b1a"
   dependencies:
     "@types/node" "*"
 
@@ -4832,13 +4856,6 @@ memfs@2.12.1:
     fast-extend "0.0.2"
     fs-monkey "^0.3.3"
 
-memfs@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/memfs/-/memfs-2.14.0.tgz#2c346ae0c91f10510bf0bcbedfd8c2e68d5c28ff"
-  dependencies:
-    fast-extend "0.0.2"
-    fs-monkey "^0.3.3"
-
 memory-fs@^0.4.0, memory-fs@~0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/memory-fs/-/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
@@ -5157,6 +5174,10 @@ neo-async@^2.5.0:
 next-tick@1:
   version "1.0.0"
   resolved "http://registry.npmjs.org/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+node-fetch@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
 
 node-forge@0.7.5:
   version "0.7.5"
