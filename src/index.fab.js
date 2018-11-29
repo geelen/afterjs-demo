@@ -7,7 +7,7 @@ const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
 export default async (req, res, settings) => {
   // Add headers here, or use ctx.res.setHeader inside getInitialProps
   res.setHeader('Content-Type', 'text/html')
-  res.setHeader('Cache-Control', 's-maxage=300, public, max-age=0')
+  res.setHeader('Cache-Control', 'public, max-age=0')
 
   // Default settings, overridden by settings above.
   const production_settings = {
