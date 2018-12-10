@@ -120,11 +120,11 @@
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
 
-"@fab/afterjs@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.1.0.tgz#000b324b35ee1db3b04a0f5a450ba887508b8625"
+"@fab/afterjs@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@fab/afterjs/-/afterjs-0.1.2.tgz#3597fb9a01ce0b7eb618d35f691b171d1999f3cd"
   dependencies:
-    "@fab/compile" "^0.0.1"
+    "@fab/compile" "^0.0.2"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
     "@oclif/plugin-help" "^2"
@@ -141,9 +141,9 @@
     tslib "^1"
     webpack "^4.26.1"
 
-"@fab/compile@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@fab/compile/-/compile-0.0.1.tgz#819f1f1c7ad8808869051413f46576cb79afde80"
+"@fab/compile@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@fab/compile/-/compile-0.0.2.tgz#ecb86c1a13f1c37f73d3ab70341e53e29fa56ee2"
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"

@@ -13,7 +13,7 @@
     "fab:e2e": "npm run build:fab && fab-serve fab.zip"
   },
   "dependencies": {
-    "@fab/afterjs": "^0.1.0",
+    "@fab/afterjs": "^0.1.2",
     "@fab/serve": "^0.1.0",
     "@jaredpalmer/after": "latest",
     "express": "^4.16.2",
