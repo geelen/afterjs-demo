@@ -10,3 +10,4 @@ public/static
 .env.*.localfab
 .fab
 fab
+fab.zip
